@@ -54,14 +54,48 @@ describe('Test Order', () => {
   });
 
   it('Test Delivery Fee', async () => {
-    //Add a Test to verify that delivery fee shows up here
-    //Act: TODO
-    //Assert: TODO
+    //ACT
+    //Call the page
+    render(
+      <OrderContext.Provider value={{ orderName, orderItems }}>
+        <Order />
+      </OrderContext.Provider>
+    );
+
+    //ASSERT
+    //Check for subtotal and delivery fee
+    await waitFor(() => {
+      expect(screen.getAllByText('$2.50')).toHaveLength(1);
+    });
+    expect(screen.getAllByText('$5.00')).toHaveLength(1);
   });
 
   it('Test Update Delivery Fee', async () => {
-    //Modify the delivery distance and verify that the delivery fee is updated
-    //Act: TODO
-    //Assert: TODO
+    //ACT
+    //Call the page
+    render(
+      <OrderContext.Provider value={{ orderName, orderItems }}>
+        <Order />
+      </OrderContext.Provider>
+    );
+
+    //ACT
+    //Update the Delivery distance by choosing the 5 mile option from the drop down
+    userEvent.selectOptions(
+      // Find the select element, like a real user would.
+      screen.getByRole('combobox'),
+      // Find and select the 5 mile option, like a real user would.
+      screen.getByRole('option', { name: '5 miles' })
+    );
+
+    //ASSERT
+    //Once the dropdown value for the delivery distance is changed, an API call will be made to determine the delivery fee
+    //Wait for the API call to return and the delivery fee to be updated
+    await waitFor(() => {
+      //The delivery fee and the subtotal should be $5.00.  So there should be 2.
+      expect(screen.getAllByText('$5.00')).toHaveLength(2);
+    });
+    //Check the total.
+    expect(screen.getAllByText('$10.00')).toHaveLength(1);
   });
 });
