@@ -49,6 +49,8 @@ describe('Test Home', () => {
   });
 
   test('Negative Test: Test Failed Category call', async () => {
+    //Arrange: Setup the mock API
+    //Listen for any GET requests using the axios module
     const mockGet = jest.spyOn(axios, 'get');
     mockGet.mockImplementation((url) => {
       switch (url) {
@@ -78,7 +80,9 @@ describe('Test Home', () => {
           });
       }
     });
+    //Act: Call the Home page
     render(<Home />);
+    //Assert: Check the values are NOT in the rendered Home page.  This is because the mocked status value is set to fail.
     expect(screen.queryByTestId(/category-item/i)).not.toBeInTheDocument();
   });
 });
