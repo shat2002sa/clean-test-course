@@ -1,0 +1,55 @@
+.wrapper {
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  height: 100vw;
+}
+.itemWrapper {
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.item {
+  padding: 0px 20px;
+  cursor: pointer;
+}
+
+.actionWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.action {
+  padding: 0 10px;
+}
+
+.action span {
+  cursor: pointer;
+  padding: 0px 5px;
+}
+
+.button {
+  border: 1px solid #222;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.bottomLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #222;
+}

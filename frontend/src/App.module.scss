@@ -1,0 +1,92 @@
+@import 'colours';
+
+@media only screen and (max-width: 400px) {
+  .pageContainer {
+    max-width: 60vh;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 80vw;
+  color: $text-color;
+  padding: 40px 0px;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2.3rem;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 1.8rem;
+  }
+
+  .toggleButton {
+    padding: 1rem;
+    font-size: 0.5em;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    border: 1px solid $button-active-border-color;
+    background: $button-light-background;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    color: $text-color;
+    font-weight: 600;
+    cursor: pointer;
+    width: 200px;
+
+    &:hover {
+      border: 1px solid $button-hover-border-color;
+      background: $button-hover-background-color;
+      color: $button-hover-text-color;
+    }
+
+    &:active {
+      border: 1px solid $button-active-border-color;
+      background: $button-active-background-color;
+      color: $button-active-text-color;
+    }
+  }
+
+  .disabledButton {
+    padding: 1rem;
+    font-size: 0.5em;
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    border: 1px solid $button-disabled-border-color;
+    background: $button-disabled-background-color;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    color: $button-disabled-text-color;
+    font-weight: 600;
+    width: 200px;
+  }
+
+  .input {
+    padding: 0.5rem;
+    font-size: 0.5em;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+    border: 1px solid $button-active-border-color;
+    //background: $background-light-gradient;
+    border-radius: 0.3rem;
+
+    color: $button-disabled-text-color;
+    font-weight: 600;
+    cursor: pointer;
+    width: 180px;
+  }
+}
