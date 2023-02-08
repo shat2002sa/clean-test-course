@@ -34,13 +34,13 @@ The back end requires [Python 3.8](https://www.python.org/downloads/). To make s
 
 #### Front End Requirements
 
-The front end was originally created using [Create React App](https://create-react-app.dev/), and it requires [Node 18](https://nodejs.org/en/download/current/). To make sure this is what your machine is working with, we recommend using this [Node version manager](https://github.com/nvm-sh/nvm).
+The front end was originally created using [Create React App](https://create-react-app.dev/), and it requires [Node 16](https://nodejs.org/en/download/current/) or newer. To make sure this is what your machine is working with, we recommend using this [Node version manager](https://github.com/nvm-sh/nvm).
 
 ## Local Installation
 
 1.  Clone the repo.
 
-        git clone git@github.com:quasifu/quantic-test-course.git
+        git clone git@github.com:quanticedu/clean-test-course.git
 
 ## Running the Back End
 
@@ -48,11 +48,11 @@ The front end was originally created using [Create React App](https://create-rea
 
     Windows:
 
-        cd quantic-test-courses\backend\hangry_api
+        cd clean-test-course\backend\hangry_api
 
     macOS/Linux:
 
-        cd quantic-test-course/backend/hangry_api
+        cd clean-test-course/backend/hangry_api
 
 2.  Set up a virtual environment.
 
@@ -148,7 +148,7 @@ The front end was originally created using [Create React App](https://create-rea
         tests/test_Tax.py ...........                      [100%]
         ================= 5 passed in 0.16s =====================
 
-4.  [Optional] Generate a coverage report:
+4.  [Optional] Generate a coverage report (note that you must have run the unit tests at least once for this to work):
 
         coverage report
 
@@ -318,4 +318,4 @@ Security testing is implemented in the `frontend` directory using [ZAP](https://
 
 All of the tests are automated into the CI/CD pipeline using [GitHub Actions](https://github.com/features/actions). GitHub Actions are defined in this repository in the `.github/workflows` folder. Feel free to view the automated runs under the [Actions](https://github.com/quasifu/quantic-test-course/actions) tab of this repository.
 
-&copy; 2022 Quantic School of Business and Technology
+&copy; 2023 Quantic School of Business and Technology
