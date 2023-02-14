@@ -1,5 +1,4 @@
 name: Lesson 5 DAST
-
 on:
   push:
     branches:
