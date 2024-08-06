@@ -19,7 +19,7 @@ jobs:
       run:
         working-directory: frontend
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: npm install
       - name: Run functional tests
         run: npm test -- --coverage --watchAll=false
@@ -36,7 +36,7 @@ jobs:
       run:
         working-directory: frontend
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: npm install && npm run build
       - name: Generate deployment package
         run: zip -r deploy.zip build Dockerfile
