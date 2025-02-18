@@ -90,7 +90,9 @@ The front end was originally created using [Create React App](https://create-rea
 
         ./manage.py runserver
 
-6.  Verify the server is running by accessing the following API's.
+    > **Note:** If you're running Python 3.13 or higher you'll get `ModuleNotFoundError: No module named 'cgi'`. Use `pip install legacy-cgi` to install a community-based version of the `cgi` module. That should get you up and running.
+
+7.  Verify the server is running by accessing the following API's.
 
     - http://127.0.0.1:8000/api/food/
 
