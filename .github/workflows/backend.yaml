@@ -11,7 +11,7 @@ on:
       - main
     paths:
       - 'backend/**'
-#Jobs sets up the number of jobs to run during the deployment, "runs-on" is used to definee the worker container to run the job in.  The default "work-directory" defines where in the source to start.  Since all changes for this workflow should be in "backend", it makes sense to start in the backend directory.  This job installs dependencies, runs tests, and creates a report.
+#Jobs sets up the number of jobs to run during the deployment, "runs-on" is used to define the worker container to run the job in.  The default "work-directory" defines where in the source to start.  Since all changes for this workflow should be in "backend", it makes sense to start in the backend directory.  This job installs dependencies, runs tests, and creates a report.
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
