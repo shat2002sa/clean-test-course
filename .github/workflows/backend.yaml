@@ -58,7 +58,7 @@ jobs:
           role-session-name: AWS_SESSION_TOKEN
           aws-region: us-east-1
       - name: Deploy to EB
-        uses: einaregilsson/beanstalk-deploy@v20
+        uses: einaregilsson/beanstalk-deploy@v22
         with:
           aws_access_key: ${{ env.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ env.AWS_SECRET_ACCESS_KEY }}
