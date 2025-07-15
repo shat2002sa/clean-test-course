@@ -1,6 +1,7 @@
 name: Deploy Hangry Hippo Frontend to Elastic Beanstalk
 # The "on" directive defines when the action will run. "push" means push to a branch, "pull request" is when a Pull Request is created for a defined branch.  The "path" directive provides an extra condition to only trigger the action if there are changes in the specified directory.  
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
