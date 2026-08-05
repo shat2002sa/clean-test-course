@@ -23,3 +23,10 @@ env.bak/
 venv.bak/ 
 
 test*.sh
+
+# SSH keys / secrets - never commit these
+id_ed25519*
+id_rsa*
+id_ecdsa*
+*.pem
+*.key
