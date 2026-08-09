@@ -1,7 +1,9 @@
 on:
   push:
     branches:
-      - lesson-2-complete
+      - lesson-2
+  workflow_dispatch:
+
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
