@@ -4,17 +4,31 @@ on:
   push:
     branches:
       - lesson-3
+
 jobs:
-  deploy: 
+  function_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run function tests
+        run: echo "Placeholder for function tests"
+
+  deploy:
     needs: [function_test]
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: frontend
-      steps:
-        - uses: actions/checkout@v4
-  #      - run: npm install && npm run build (commented out to save learner time)
-        - name: Generate deployment package
-          run: zip -r deploy.zip build Dockerfile
-        - name: '**PLACEHOLDER** Deploy to Elastic Beanstalk'
-          run: echo Placeholder for Deployment
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # - run: npm install && npm run build
+      # (commented out to save learner time)
+
+      - name: Generate deployment package
+        run: zip -r deploy.zip build Dockerfile
+
+      - name: "PLACEHOLDER Deploy to Elastic Beanstalk"
+        run: echo "Placeholder for Deployment"
