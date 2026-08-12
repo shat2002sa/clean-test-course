@@ -30,3 +30,5 @@ id_rsa*
 id_ecdsa*
 *.pem
 *.key
+.vscode/
+
